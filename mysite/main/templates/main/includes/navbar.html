@@ -1,0 +1,37 @@
+<nav style="background-color:#003F72; margin-top: -22px;">
+    <div class="nav-wrapper mainMargin">
+      <a href="#" class="brand-logo">Logo</a>
+      <a href="#" class="sidenav-trigger"  data-target="mobile-nav">
+          <i class="material-icons">menu</i>
+    </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/index/">Home</a></li>
+        <li><a href="/aboutus/">About Us</a></li>
+        <li><a href="/contactus/">Contact Us</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="/">Courses</a></li>
+             <li><a href="/account/">{{user.username|title}}</a></li>
+             <li><a href="/logout/">Logout</a></li>
+        {% else %}
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-nav">
+        <li><a href="/index/">Home</a></li>
+        <li><a href="/aboutus/">About Us</a></li>
+        <li><a href="/contactus/">Contact Us</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="/">Courses</a></li>
+             <li><a href="/account/">{{user.username|title}}</a></li>
+             <li><a href="/logout/">Logout</a></li>
+        {% else %}
+            <li><a href="/login/">Login</a></li>
+            <li><a href="/register/">Register</a></li>
+        {% endif %}
+
+  </ul>
+  

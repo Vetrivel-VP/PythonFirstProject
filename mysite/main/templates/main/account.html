@@ -1,0 +1,49 @@
+<link href="/static/main/css/material-kit.css" rel="stylesheet">
+{% extends 'main/header.html' %}
+{% load static %}
+{% block content %}
+<div class="profile-page sidebar-collapse">
+<div class="page-header header-filter" data-parallax="true" style="background-image: url({% static 'main/images/city-profile.jpg' %});"></div>
+  <div class="main main-raised">
+    <div class="profile-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 ml-auto mr-auto">
+            <div class="profile">
+              <div class="avatar">
+                <img src="{% static 'main/images/christian.jpg' %}" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+              </div>
+              <div class="name">
+                <h3 class="title">{{user.username|title}}</h3>
+                <h6>Designer</h6>
+                <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
+                <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="description text-center">
+          <p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p><br><br>
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+  <footer class="footer footer-default">
+    <div class="container">
+      
+      <div class="copyright float-right">
+        &copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script>, made with <i class="material-icons">favorite</i>
+      </div>
+    </div>
+  </footer>
+</div>
+{% endblock %}
+
+
+

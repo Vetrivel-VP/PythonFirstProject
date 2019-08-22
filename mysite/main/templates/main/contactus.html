@@ -1,0 +1,60 @@
+{% extends 'main/header.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <div class="row card ">
+        <div class="col m10 offset-m1 s12">
+            <h2 class="center-align">Contact Form</h2>
+            <div class="row">
+                <form class="col s12" method="POST">
+                	{% csrf_token %}
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <input id="first_name" name="first_name" type="text" class="validate">
+                            <label for="first_name">First Name</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                            <input id="last_name" name="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col m6 s12">
+                            <i class="large mail"></i>
+                            <input id="from_email" name="from_email" type="email" class="validate" required>
+                            <label for="from_email">Email</label>
+                        </div>
+                        <div class="input-field col m6 s12">
+                            <i class="maps"></i>
+                            <input id="subject " name="subject " type="text" class="validate">
+                            <label for="subject ">Subject</label>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                          <textarea id="message" name="message" class="materialize-textarea"></textarea>
+                          <label for="message">Message</label>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="row">
+                        <div class="col m12">
+                         <p class="right-align"><button class="btn btn-large waves-effect waves-light" type="submit" name="action">Send Message</button></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+

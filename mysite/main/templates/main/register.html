@@ -1,0 +1,35 @@
+{% extends 'main/header.html' %}
+
+{% block content %}
+
+<div class="row">
+	<div class="col s12 m4 offset-m4">
+		<div class="card">
+			<dir class="card-action blue  darken-3 white-text">
+				<h3>Login Here</h3>
+			</dir>
+			<div class="card-content">
+				<form method="POST">
+					<div class="form-field">
+						{% csrf_token %}
+						{% for field in form %}
+						    <div class="fieldWrapper">
+						        {{ field.errors }}
+						        {{ field.label_tag }} {{ field }}
+						    </div>
+						{% endfor %}
+					</div><br>
+					<div class="form-field">
+						If you already have an account <a href="/login" target="blank"><strong>login</strong></a> instead.
+					</div><br>
+					<div class="form-field">
+						<button class="btn-large blue  darken-3 waves-effect waves-dark " style="width: 100%">Register</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+  
+   
+{% endblock %}
