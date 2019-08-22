@@ -5,7 +5,7 @@ from . import views
 app_name = 'main'  # here for namespacing of urls.
 
 urlpatterns = [
-    path("", views.homepage, name="homepage"),
+    path("", views.indexpage, name="indexpage"),
     path("index/",views.indexpage, name="indexpage"),
     path("aboutus/",views.aboutuspage, name="aboutuspage"),
     path("contactus/",views.contactuspage, name="contactuspage"),
